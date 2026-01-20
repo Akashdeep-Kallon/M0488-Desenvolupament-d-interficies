@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="event.css" />
     <link rel="stylesheet" href="../../body.css" />
-    <link rel="stylesheet" href="catalogo.css" />
-    <title>Monogatarya - Perfil de Usuario</title>
+    <title>Monogatarya - Evento</title>
 </head>
 
 <body>
@@ -17,14 +17,11 @@
                     <use href="#menu"></use>
                 </svg>
             </label>
-
             <img src="../../../logo.png" alt="Logo de la página">
             <h1>MONOGATARYA</h1>
-
             <div class="right-group">
                 <form action="" autocomplete="on" method="get">
                     <div class="search">
-
                         <button class="icon-btn red" aria-label="Buscar">
                             <svg class="icon">
                                 <use href="#buscar"></use>
@@ -39,7 +36,6 @@
                                 <use href="#microfono"></use>
                             </svg>
                         </button>
-
                     </div>
                 </form>
                 <a href="../../user/user.html">
@@ -53,187 +49,48 @@
         </div>
     </header>
 
-
-    <section class="catalogo">
-
-        <h2 class="catalogo-titulo">Catálogo de animes</h2>
-
-        <section id="page1" class="pagina">
-            <div class="card">
-                <div class="img"></div>
-                <p>Nombre 1: Información</p>
-            </div>
-            <div class="card">
-                <div class="img"></div>
-                <p>Nombre 1: Información</p>
-            </div>
-            <div class="card">
-                <div class="img"></div>
-                <p>Nombre 1: Información</p>
-            </div>
-
-            <div class="card">
-                <div class="img"></div>
-                <p>Nombre 1: Información</p>
-            </div>
-            <div class="card">
-                <div class="img"></div>
-                <p>Nombre 1: Información</p>
-            </div>
-            <div class="card">
-                <div class="img"></div>
-                <p>Nombre 1: Información</p>
-            </div>
-
-            <div class="card">
-                <div class="img"></div>
-                <p>Nombre 1: Información</p>
-            </div>
-            <div class="card">
-                <div class="img"></div>
-                <p>Nombre 1: Información</p>
-            </div>
-            <div class="card">
-                <div class="img"></div>
-                <p>Nombre 1: Información</p>
+    <div id="principal">
+        <section>
+            <div class="titleContainer">
+                <h2>Eventos</h2>
             </div>
         </section>
 
-        <section id="page2" class="pagina">
-            <div class="card">
-                <div class="img"></div>
-                <p>Nombre 2: Información</p>
-            </div>
-            <div class="card">
-                <div class="img"></div>
-                <p>Nombre 2: Información</p>
-            </div>
-            <div class="card">
-                <div class="img"></div>
-                <p>Nombre 2: Información</p>
+        <form class="formulario-ver">
+
+            <div class="contenedor-imagen">
+                <div class="preview-grande">
+                    <span>IMAGEN DEL EVENTO</span>
+                </div>
             </div>
 
-            <div class="card">
-                <div class="img"></div>
-                <p>Nombre 2: Información</p>
-            </div>
-            <div class="card">
-                <div class="img"></div>
-                <p>Nombre 2: Información</p>
-            </div>
-            <div class="card">
-                <div class="img"></div>
-                <p>Nombre 2: Información</p>
+            <div class="info-ver">
+                <div class="campo">
+                    <input type="text" name="nombre" value="Nombre del evento" readonly required>
+                </div>
+
+                <div class="campo">
+                    <textarea name="descripcion" readonly required minlength="10">Descripción</textarea>
+                </div>
+
+                <div class="campo">
+                    <input type="date" name="fecha" value="Fecha" readonly required>
+                </div>
+
+                <div class="campo">
+                    <input type="text" name="lugar" value="Lugar" readonly required>
+                </div>
             </div>
 
-            <div class="card">
-                <div class="img"></div>
-                <p>Nombre 2: Información</p>
+            <div class="botones">
+                <button type="submit" class="btn btn-add">Reservar</button>
+                <button type="reset" class="btn btn-delete">Anular</button>
             </div>
-            <div class="card">
-                <div class="img"></div>
-                <p>Nombre 2: Información</p>
-            </div>
-            <div class="card">
-                <div class="img"></div>
-                <p>Nombre 2: Información</p>
-            </div>
-        </section>
-
-        <section id="page3" class="pagina">
-            <div class="card">
-                <div class="img"></div>
-                <p>Nombre 3: Información</p>
-            </div>
-            <div class="card">
-                <div class="img"></div>
-                <p>Nombre 3: Información</p>
-            </div>
-            <div class="card">
-                <div class="img"></div>
-                <p>Nombre 3: Información</p>
-            </div>
-
-            <div class="card">
-                <div class="img"></div>
-                <p>Nombre 3: Información</p>
-            </div>
-            <div class="card">
-                <div class="img"></div>
-                <p>Nombre 3: Información</p>
-            </div>
-            <div class="card">
-                <div class="img"></div>
-                <p>Nombre 3: Información</p>
-            </div>
-
-            <div class="card">
-                <div class="img"></div>
-                <p>Nombre 3: Información</p>
-            </div>
-            <div class="card">
-                <div class="img"></div>
-                <p>Nombre 3: Información</p>
-            </div>
-            <div class="card">
-                <div class="img"></div>
-                <p>Nombre 3: Información</p>
-            </div>
-        </section>
-
-        <section id="page4" class="pagina">
-            <div class="card">
-                <div class="img"></div>
-                <p>Nombre 4: Información</p>
-            </div>
-            <div class="card">
-                <div class="img"></div>
-                <p>Nombre 4: Información</p>
-            </div>
-            <div class="card">
-                <div class="img"></div>
-                <p>Nombre 4: Información</p>
-            </div>
-
-            <div class="card">
-                <div class="img"></div>
-                <p>Nombre 4: Información</p>
-            </div>
-            <div class="card">
-                <div class="img"></div>
-                <p>Nombre 4: Información</p>
-            </div>
-            <div class="card">
-                <div class="img"></div>
-                <p>Nombre 4: Información</p>
-            </div>
-
-            <div class="card">
-                <div class="img"></div>
-                <p>Nombre 4: Información</p>
-            </div>
-            <div class="card">
-                <div class="img"></div>
-                <p>Nombre 4: Información</p>
-            </div>
-            <div class="card">
-                <div class="img"></div>
-                <p>Nombre 4: Información</p>
-            </div>
-        </section>
-
-        <div class="paginacion">
-            <a href="#page1">&lt;</a>
-            <a href="#page1">1</a>
-            <a href="#page2">2</a>
-            <a href="#page3">3</a>
-            <a href="#page4">4</a>
-            <a href="#page2">&gt;</a>
-        </div>
-
-    </section>
-
+        </form>
+    </div>
 </body>
+
+
 
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
     <symbol id="menu" viewBox="0 0 522 478">
@@ -280,9 +137,9 @@
 
 <ul class="menu-width">
     <li><a href="../../index/index.html">Página de inicio</a></li>
-    <li><a href="animes.html">Catálogo de animes</a></li>
-    <li><a href="mangas.html">Catálogo de mangas</a></li>
-    <li><a href="../event/c_event.html">Eventos</a></li>
+    <li><a href="../catalogo/animes.html">Catálogo de animes</a></li>
+    <li><a href="../catalogo/mangas.html">Catálogo de mangas</a></li>
+    <li><a href="m_event.html">Eventos</a></li>
     <li class="logout"><a href="../../../start/start.html">Cerrar sesión</a></li>
 </ul>
 
