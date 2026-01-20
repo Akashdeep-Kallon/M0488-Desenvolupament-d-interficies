@@ -58,8 +58,10 @@
         <form class="formulario">
 
             <div class="imagen">
-
-                <div class="preview"></div>
+                <div class="contenedor-imagen">
+                    <div class="preview">
+                    </div>
+                </div>
 
                 <label class="subirImg">
                     <input type="file" name="imagen" accept="image/*" required>
@@ -67,17 +69,12 @@
                 </label>
             </div>
 
-            <div class="info">
-
+            <div class="info-ver">
                 <input type="text" name="nombre" placeholder="Nombre del evento" required minlength="3" maxlength="50">
-
                 <textarea name="descripcion" placeholder="Descripción" required minlength="10"
                     maxlength="300"></textarea>
-
                 <input type="date" name="fecha" required>
-
                 <input type="text" name="lugar" placeholder="Lugar" required minlength="3">
-
                 <input type="text" name="promotores" placeholder="Promotores" required>
             </div>
 
