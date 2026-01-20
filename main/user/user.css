@@ -1,0 +1,98 @@
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
+.perfil-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.perfil-titulo {
+    font-size: 28px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.perfil-titulo::after {
+    content: "";
+    display: block;
+    width: 300px;
+    height: 3px;
+    background: #ff4141;
+    margin-top: 8px;
+}
+
+.perfil-card {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.perfil-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.avatar {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar svg {
+    width: 70px;
+    height: 70px;
+}
+
+.btn-foto {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.perfil-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.perfil-right input {
+    background: #3a3a3a;
+    border: none;
+    padding: 14px 20px;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    outline: none;
+}
+
+.perfil-right input::placeholder {
+    color: #bbb;
+}
+
+.perfil-botones {
+    margin-left: 500px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.perfil-botones .btn {
+    min-width: 400px;
+    padding: 14px 0;     
+    font-size: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}

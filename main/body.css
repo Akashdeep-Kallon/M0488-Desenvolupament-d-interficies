@@ -1,0 +1,211 @@
+* {
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+}
+
+.icon-btn,
+.close-menu label,
+.gallery {
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.btn {
+    width: 373px;
+    height: 73px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 24px;
+    font-weight: 600;
+    color: #000;
+
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    user-select: none;
+
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.btn:active {
+    transform: scale(0.96);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.btn-add {
+    background-color: rgba(135, 255, 157, 0.9);
+}
+
+.btn-delete {
+    background-color: rgba(255, 65, 65, 0.9);
+}
+
+.icon-btn {
+    width: 100px;
+    height: 100px;
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.icon-btn:active {
+    transform: scale(0.9);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+}
+
+.icon {
+    width: 40px;
+    height: 30px;
+    fill: currentColor;
+    transition: color 0.2s ease, transform 0.12s ease;
+}
+
+.icon-btn.white {
+    color: #fff;
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.8));
+}
+
+.icon-btn.red {
+    width: 40px;
+    height: 40px;
+    color: #FF4141;
+}
+
+.icon-btn:hover .icon {
+    color: #FF4141;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    color: white;
+}
+
+body {
+    padding-top: 110px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1100;
+}
+
+.header-gruop {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    background-color: rgba(31, 31, 31);
+    color: white;
+    padding: 5px;
+}
+
+.header-gruop button[aria-label="Usuario"] .icon {
+    width: 40px;
+    height: 40px;
+}
+
+.header-gruop img {
+    width: 75px;
+    margin-right: 20px;
+}
+
+.header-gruop h1 {
+    font-size: 50px;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-weight: Bold;
+}
+
+.right-group {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    padding: 14px;
+    border-radius: 50px;
+    border: 2px solid #FF4141;
+    background: transparent;
+    width: 300px;
+    height: 10px;
+}
+
+.search-input {
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    color: white;
+    margin-left: 14px;
+    outline: none;
+    border: none;
+    background: transparent;
+    width: 250px;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-width {
+    position: fixed;
+    top: 0;
+    left: -320px;
+    width: 300px;
+    height: 100%;
+    background: #1b1b1b;
+    padding-top: 120px;
+    list-style: none;
+    margin: 0;
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+.menu-width li {
+    padding: 20px 30px;
+    border-bottom: 1px solid #444;
+}
+
+.menu-width li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.menu-width li a:hover {
+    color: #FF4141;
+}
+
+.menu-width .logout a {
+    color: #FF4141;
+}
+
+#menu-toggle:checked~.menu-width {
+    left: 0;
+}

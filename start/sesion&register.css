@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+.btn {
+    width: 373px;
+    height: 73px;
+
+    font-size: 22px;
+    font-weight: 600;
+
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    user-select: none;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    transition: transform 0.12s ease;
+}
+
+.btn:active {
+    transform: scale(0.96);
+}
+
+.btn-primary {
+    background: rgba(255, 255, 255, 0.90);
+    color: black;
+    margin-bottom: 20px;
+}
+
+.divider {
+    margin: 10px 0 20px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+html,
+body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-image: url("background-image.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.container {
+    width: 440px;
+    height: 100%;
+    padding: 40px 30px;
+    background: rgba(0, 0, 0, 0.65);
+    text-align: center;
+}
+
+.container h2 {
+    font-size: 42px;
+    margin-bottom: 30px;
+}
+
+.btn-input {
+    width: 373px;
+    height: 73px;
+    margin-bottom: 12px;
+    padding: 0 20px;
+
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+
+    background: rgba(255, 255, 255, 0.18);
+    border: none;
+    border-radius: 10px;
+    outline: none;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.btn-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.btn-back {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.6);
+
+    display: flex;
+    flex-direction: left;
+
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.btn-back:active {
+    transform: scale(0.96);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.btn-back:hover {
+    color: #FF4141;
+}
+
+.error-box {
+    width: 373px;
+    margin: 8px auto 18px;
+    padding: 10px 14px;
+
+    background: #ffbaba;
+    color: #9c0000;
+    font-size: 14px;
+    text-align: left;
+
+    border-radius: 6px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.error-box .icon {
+    font-weight: bold;
+}

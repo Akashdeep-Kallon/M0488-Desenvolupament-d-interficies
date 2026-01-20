@@ -1,0 +1,73 @@
+body {
+    scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+article {
+    width: 100%;
+    padding: 30px;
+}
+
+.catalogo {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px 60px;
+}
+
+.catalogo-titulo {
+    background: #d63a3a;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 40px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.pagina {
+    display: none;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pagina:target {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.card {
+    text-align: left;
+}
+
+.card .img {
+    width: 100%;
+    height: 160px;
+    background: #3a3a3a;
+    border: 2px solid #222;
+}
+
+.card p {
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.paginacion {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 18px;
+}
+
+.paginacion a {
+    color: white;
+    text-decoration: none;
+    margin: 0 8px;
+}
+
+.paginacion a:hover {
+    color: #d63a3a;
+}

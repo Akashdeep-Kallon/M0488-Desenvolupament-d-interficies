@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sesion&register.css">
+    <title>Monogatarya - Iniciar sesión</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <button class="btn-back" type="button" onclick="history.back()">❮</button>
+
+        <h2>Iniciar sesión</h2>
+        <form action="../main/index/index.html" method="post">
+            <input class="btn-input" type="email" placeholder="Email" required>
+
+            <input class="btn-input" type="password" placeholder="Contraseña" required>
+
+            <div class="error-box">
+                <span class="icon">ⓘ</span>
+                <span>La contraseña y el correo electrónico no coinciden. Inténtalo de nuevo.</span>
+            </div>
+
+            <input class="btn btn-primary" type="submit" value="Iniciar sesión">
+        </form>
+
+        <p class="divider">O</p>
+
+        <form action="register.html">
+            <button class="btn btn-secondary">Registrarse</button>
+        </form>
+
+        <label class="remember">
+            <input type="checkbox">
+            Recuérdarme
+        </label>
+    </div>
+
+</body>
+
+</html>
