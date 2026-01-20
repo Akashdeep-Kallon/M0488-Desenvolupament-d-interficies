@@ -209,3 +209,23 @@ header {
 #menu-toggle:checked~.menu-width {
     left: 0;
 }
+
+.error-box {
+    width: 370px;
+    margin: 8px auto 18px;
+    padding: 10px 14px;
+
+    background: #ffbaba;
+    color: #9c0000;
+    font-size: 14px;
+    text-align: left;
+
+    border-radius: 6px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.error-box .icon {
+    font-weight: bold;
+}
