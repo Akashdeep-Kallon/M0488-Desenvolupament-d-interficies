@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../body.css" />
     <link rel="stylesheet" href="catalogo.css" />
-    <title>Monogatarya - Catálogo de animes</title>
+    <title>Monogatarya - Perfil de Usuario</title>
 </head>
 
 <body>
@@ -17,22 +17,29 @@
                     <use href="#menu"></use>
                 </svg>
             </label>
+
             <img src="../../../logo.png" alt="Logo de la página">
             <h1>MONOGATARYA</h1>
+
             <div class="right-group">
                 <form action="" autocomplete="on" method="get">
                     <div class="search">
+
                         <button class="icon-btn red" aria-label="Buscar">
                             <svg class="icon">
                                 <use href="#buscar"></use>
                             </svg>
                         </button>
-                        <input class="search-input" type="search" placeholder="Search">
+
+                        <input class="search-input" type="search" name="busqueda" placeholder="Search" required
+                            minlength="2" maxlength="40">
+
                         <button class="icon-btn red" aria-label="Micrófono">
                             <svg class="icon">
                                 <use href="#microfono"></use>
                             </svg>
                         </button>
+
                     </div>
                 </form>
                 <a href="../../user/user.html">
@@ -45,6 +52,7 @@
             </div>
         </div>
     </header>
+
 
     <section class="catalogo">
 
