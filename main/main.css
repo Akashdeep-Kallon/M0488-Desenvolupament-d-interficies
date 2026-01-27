@@ -7,6 +7,14 @@ h2 {
     margin: 0;
 }
 
+body {
+    scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
 .icon-btn,
 .close-menu label,
 .gallery {
