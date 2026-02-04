@@ -2,6 +2,14 @@
    BASE / RESET
 ===================== */
 
+body {
+    scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
 .icon-btn,
 .close-menu label,
 .gallery {
