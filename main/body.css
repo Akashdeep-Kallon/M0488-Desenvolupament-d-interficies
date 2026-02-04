@@ -1,11 +1,6 @@
-* {
-    font-family: Arial, sans-serif;
-}
-
-h2 {
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-}
+/* =====================
+   BASE / RESET
+===================== */
 
 .icon-btn,
 .close-menu label,
@@ -15,21 +10,46 @@ h2 {
     -ms-user-select: none;
 }
 
+html,
+body {
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+
+    background: #000;
+    color: white;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Ajustado a la altura real del header */
+body {
+    padding-top: 90px;
+}
+
+/* =====================
+   BOTONES
+===================== */
+
 .btn {
-    width: 373px;
+    width: 90%;
+    max-width: 373px;
     height: 73px;
+
     display: inline-flex;
     justify-content: center;
     align-items: center;
 
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 600;
     color: #000;
 
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    user-select: none;
 
     transition: transform 0.12s ease, box-shadow 0.12s ease;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
@@ -48,15 +68,22 @@ h2 {
     background-color: rgba(255, 65, 65, 0.9);
 }
 
+/* =====================
+   ICON BUTTONS
+===================== */
+
 .icon-btn {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
+
     border: none;
     border-radius: 50%;
     background: transparent;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     cursor: pointer;
     transition: transform 0.12s ease, box-shadow 0.12s ease;
 }
@@ -88,22 +115,9 @@ h2 {
     color: #FF4141;
 }
 
-html,
-body {
-    overflow-x: hidden;
-    overflow-y: auto;
-
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    background: #000;
-    color: white;
-}
-
-body {
-    padding-top: 110px;
-}
+/* =====================
+   HEADER
+===================== */
 
 header {
     position: fixed;
@@ -115,28 +129,31 @@ header {
 
 .header-gruop {
     display: flex;
-    width: 100%;
     align-items: center;
-    background-color: rgba(31, 31, 31);
-    color: white;
-    padding: 5px;
+    gap: 10px;
+
+    height: 90px;
+    padding: 0 12px;
+    width: 100%;
+
+    background-color: rgb(31, 31, 31);
+}
+
+.header-gruop img {
+    width: 75px;
+    height: auto;
+}
+
+.header-gruop h1 {
+    font-size: clamp(28px, 3.5vw, 48px);
+    line-height: 1;
+    margin: 0;
+    font-weight: bold;
 }
 
 .header-gruop button[aria-label="Usuario"] .icon {
     width: 40px;
     height: 40px;
-}
-
-.header-gruop img {
-    width: 75px;
-    margin-right: 20px;
-}
-
-.header-gruop h1 {
-    font-size: 50px;
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-    font-weight: Bold;
 }
 
 .right-group {
@@ -146,28 +163,40 @@ header {
     gap: 10px;
 }
 
+/* =====================
+   SEARCH
+===================== */
+
 .search {
-    width: max-content;
     display: flex;
     align-items: center;
-    padding: 14px;
+    gap: 8px;
+
+    height: 44px;
+    padding: 0 14px;
+
     border-radius: 50px;
     border: 2px solid #FF4141;
     background: transparent;
+
     width: 300px;
-    height: 10px;
 }
 
 .search-input {
+    height: 100%;
+    line-height: 1;
     font-size: 16px;
-    font-family: Arial, sans-serif;
+
     color: white;
-    margin-left: 14px;
     outline: none;
     border: none;
     background: transparent;
-    width: 250px;
 }
+
+
+/* =====================
+   MENU LATERAL
+===================== */
 
 #menu-toggle {
     display: none;
@@ -176,11 +205,15 @@ header {
 .menu-width {
     position: fixed;
     top: 0;
-    left: -320px;
-    width: 300px;
+    left: -100%;
+
+    width: 80%;
+    max-width: 300px;
     height: 100%;
+
     background: #1b1b1b;
     padding-top: 120px;
+
     list-style: none;
     margin: 0;
     transition: left 0.3s ease;
@@ -206,26 +239,57 @@ header {
     color: #FF4141;
 }
 
-#menu-toggle:checked~.menu-width {
+#menu-toggle:checked ~ .menu-width {
     left: 0;
 }
 
-.error-box {
-    width: 370px;
-    margin: 8px auto 18px;
-    padding: 10px 14px;
+/* =====================
+   MEDIA QUERIES
+===================== */
 
-    background: #ffbaba;
-    color: #9c0000;
-    font-size: 14px;
-    text-align: left;
+/* TABLET */
+@media screen and (max-width: 768px) {
 
-    border-radius: 6px;
-    display: flex;
-    gap: 8px;
-    align-items: center;
+    body {
+        padding-top: 80px;
+    }
+
+    .header-gruop {
+        height: 80px;
+    }
+
+    .search {
+        display: none;
+    }
+
+    .icon-btn {
+        width: 70px;
+        height: 70px;
+    }
+
+    .header-gruop img {
+        width: 60px;
+    }
 }
 
-.error-box .icon {
-    font-weight: bold;
+/* MÓVIL */
+@media screen and (max-width: 480px) {
+
+    body {
+        padding-top: 70px;
+    }
+
+    .header-gruop {
+        height: 70px;
+    }
+
+    .header-gruop img {
+        width: 50px;
+    }
+
+    .menu-width {
+        width: 100%;
+        max-width: none;
+    }
+    
 }
