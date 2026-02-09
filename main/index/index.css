@@ -1,7 +1,3 @@
-/* =====================
-   GALERÍA / SLIDER
-===================== */
-
 .gallery {
     position: relative;
     width: 100%;
@@ -49,9 +45,6 @@
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
 }
 
-/* =====================
-   POSICIONES SLIDER
-===================== */
 
 #s1:checked ~ .cards label:nth-child(1),
 #s2:checked ~ .cards label:nth-child(2),
@@ -77,9 +70,6 @@
     z-index: 2;
 }
 
-/* =====================
-   TÍTULO SECCIÓN
-===================== */
 
 .titleContainer {
     background-color: #FF4141;

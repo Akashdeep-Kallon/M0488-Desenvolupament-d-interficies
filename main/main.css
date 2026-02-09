@@ -1,7 +1,4 @@
-/* =====================
-   BASE / RESET
-===================== */
-
+/* OCULTAR SCROLLBAR */
 body {
     scrollbar-width: none;
 }
@@ -10,6 +7,7 @@ body::-webkit-scrollbar {
     display: none;
 }
 
+/* DESACTIVAR SELECCIÓN */
 .icon-btn,
 .close-menu label,
 .gallery {
@@ -18,47 +16,39 @@ body::-webkit-scrollbar {
     -ms-user-select: none;
 }
 
+/* BASE HTML Y BODY */
 html,
 body {
     overflow-x: hidden;
     overflow-y: auto;
-
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
-
     background: #000;
     color: white;
     font-family: 'Inter', sans-serif;
 }
 
-/* Ajustado a la altura real del header */
+/* ESPACIO PARA HEADER FIJO */
 body {
     padding-top: 90px;
 }
 
-/* =====================
-   BOTONES
-===================== */
-
+/* BOTONES GENERALES */
 .btn {
     width: 90%;
     max-width: 373px;
     height: 73px;
-
     display: inline-flex;
     justify-content: center;
     align-items: center;
-
     font-size: 22px;
     font-weight: 600;
     color: #000;
-
     border: none;
     border-radius: 10px;
     cursor: pointer;
-
     transition: transform 0.12s ease, box-shadow 0.12s ease;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
@@ -68,6 +58,7 @@ body {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
 }
 
+/* BOTONES DE ACCIÓN */
 .btn-add {
     background-color: rgba(135, 255, 157, 0.9);
 }
@@ -76,22 +67,16 @@ body {
     background-color: rgba(255, 65, 65, 0.9);
 }
 
-/* =====================
-   ICON BUTTONS
-===================== */
-
+/* BOTONES DE ICONO */
 .icon-btn {
     width: 90px;
     height: 90px;
-
     border: none;
     border-radius: 50%;
     background: transparent;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     cursor: pointer;
     transition: transform 0.12s ease, box-shadow 0.12s ease;
 }
@@ -101,6 +86,7 @@ body {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
 }
 
+/* ICONOS SVG */
 .icon {
     width: 40px;
     height: 30px;
@@ -123,10 +109,7 @@ body {
     color: #FF4141;
 }
 
-/* =====================
-   HEADER
-===================== */
-
+/* HEADER */
 header {
     position: fixed;
     top: 0;
@@ -135,15 +118,14 @@ header {
     z-index: 1100;
 }
 
+/* CONTENIDO HEADER */
 .header-gruop {
     display: flex;
     align-items: center;
     gap: 10px;
-
     height: 90px;
     padding: 0 12px;
     width: 100%;
-
     background-color: rgb(31, 31, 31);
 }
 
@@ -164,6 +146,7 @@ header {
     height: 40px;
 }
 
+/* GRUPO DERECHO HEADER */
 .right-group {
     margin-left: auto;
     display: flex;
@@ -171,22 +154,16 @@ header {
     gap: 10px;
 }
 
-/* =====================
-   SEARCH
-===================== */
-
+/* BUSCADOR */
 .search {
     display: flex;
     align-items: center;
     gap: 8px;
-
     height: 44px;
     padding: 0 14px;
-
     border-radius: 50px;
     border: 2px solid #FF4141;
     background: transparent;
-
     width: 300px;
 }
 
@@ -194,18 +171,13 @@ header {
     height: 100%;
     line-height: 1;
     font-size: 16px;
-
     color: white;
     outline: none;
     border: none;
     background: transparent;
 }
 
-
-/* =====================
-   MENU LATERAL
-===================== */
-
+/* MENU LATERAL */
 #menu-toggle {
     display: none;
 }
@@ -214,14 +186,11 @@ header {
     position: fixed;
     top: 0;
     left: -100%;
-
     width: 80%;
     max-width: 300px;
     height: 100%;
-
     background: #1b1b1b;
     padding-top: 120px;
-
     list-style: none;
     margin: 0;
     transition: left 0.3s ease;
@@ -250,10 +219,6 @@ header {
 #menu-toggle:checked ~ .menu-width {
     left: 0;
 }
-
-/* =====================
-   MEDIA QUERIES
-===================== */
 
 /* TABLET */
 @media screen and (max-width: 768px) {
@@ -299,5 +264,4 @@ header {
         width: 100%;
         max-width: none;
     }
-    
 }
