@@ -93,23 +93,30 @@ body {
     color: #bbb;
 }
 
-/* BOTONES PERFIL */
+/* BOTONES PERFIL - DESKTOP */
 .perfil-botones {
-    margin-left: 500px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; 
     gap: 40px;
+    margin-left: 0;
 }
 
 .perfil-botones .btn {
-    min-width: 400px;
+    flex: 1 1 auto;
+    max-width: 400px;
+    min-width: 300px;
     padding: 14px 0;
     font-size: 20px;
     border-radius: 8px;
     cursor: pointer;
 }
 
-/*TABLET*/
+
+
+
+/* =====================
+   TABLET
+===================== */
 
 @media screen and (max-width: 768px) {
 
@@ -158,7 +165,9 @@ body {
     }
 }
 
-/*MOVIL*/
+/* =====================
+   MOVIL
+===================== */
 
 @media screen and (max-width: 480px) {
 
