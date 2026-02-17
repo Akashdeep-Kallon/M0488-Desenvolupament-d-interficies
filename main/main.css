@@ -216,7 +216,7 @@ header {
     color: #FF4141;
 }
 
-#menu-toggle:checked ~ .menu-width {
+#menu-toggle:checked~.menu-width {
     left: 0;
 }
 
@@ -228,6 +228,7 @@ header {
     }
 
     .header-gruop {
+        position: relative;
         height: 80px;
     }
 
@@ -241,7 +242,15 @@ header {
     }
 
     .header-gruop img {
-        width: 60px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 75px;
+        height: auto;
+    }
+
+    .header-gruop h1 {
+        display: none;
     }
 }
 
@@ -256,12 +265,9 @@ header {
         height: 70px;
     }
 
-    .header-gruop img {
-        width: 50px;
-    }
-
     .menu-width {
         width: 100%;
         max-width: none;
     }
+
 }
