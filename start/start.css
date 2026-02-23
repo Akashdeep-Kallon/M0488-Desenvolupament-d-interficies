@@ -4,15 +4,12 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-
     font-size: 18px;
-    font-weight: medium;
-
+    font-weight: 500;
     border: 2px solid rgba(255, 255, 255, 0.15);
     border-radius: 10px;
     cursor: pointer;
     user-select: none;
-
     transition: transform 0.12s ease, box-shadow 0.12s ease;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
@@ -24,7 +21,7 @@
 
 .btn-register {
     color: rgba(255, 255, 255, 0.71);
-    background-color: rgba(31, 31, 31, 0.95)
+    background-color: rgba(31, 31, 31, 0.95);
 }
 
 .btn:active {
@@ -36,33 +33,20 @@ html,
 body {
     overflow-x: hidden;
     overflow-y: hidden;
-
     margin: 0;
     padding: 0;
-    width: 100%;
-    height: 100%;
-    background: #000;
+    min-height: 100%;
     color: white;
-}
+    font-family: Inter, Arial, sans-serif;
 
-body {
-    background-image: url("background-image.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-header {
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1100;
+    background: linear-gradient(rgba(0, 0, 0, .55), rgba(0, 0, 0, .6)),
+        url("background-image.png") center/cover no-repeat;
 }
 
 .header-gruop {
     display: flex;
     align-items: center;
-    height: 100px;
+    min-height: 100px;
     background-color: rgba(31, 31, 31, 0.95);
     padding: 5px 20px;
 }
@@ -73,10 +57,9 @@ header {
 }
 
 .header-gruop h1 {
-    font-size: 50px;
+    font-size: clamp(34px, 4vw, 50px);
     margin: 0;
-    font-family: 'Inter', sans-serif;
-    font-weight: Bold;
+    font-weight: 700;
 }
 
 .right-group {
@@ -86,10 +69,51 @@ header {
     gap: 10px;
 }
 
-.textInformation h2 {
-    font-size: 60px;
-    font-weight: Bold;
-    font-family: 'Inter', sans-serif;
-    color: rgba(255, 255, 255, 0.75);
+main {
+    width: min(1100px, 92vw);
+    margin: 0 auto;
+    min-height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.hero h2 {
+    margin: 0;
+    font-size: clamp(1.8rem, 6vw, 3.8rem);
+    max-width: 12ch;
+}
+
+footer {
+    color: #ddd;
     text-align: center;
+    padding-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .header-gruop {
+        min-height: 88px;
+    }
+
+    .btn {
+        width: 128px;
+        height: 44px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-gruop {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 12px;
+        gap: 10px;
+    }
+
+    .right-group {
+        width: 100%;
+        justify-content: center;
+    }
 }

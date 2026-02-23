@@ -36,6 +36,7 @@ body {
     text-align: center;
 }
 
+.container h1,
 .container h2 {
     font-size: clamp(28px, 4vw, 42px);
     margin-bottom: 30px;
@@ -193,7 +194,37 @@ form:has(.input-confirm:invalid:not(:placeholder-shown)) .error-confirm {
         font-size: 16px;
     }
 
-    .container h2 {
+    .container h1,
+.container h2 {
         margin-bottom: 20px;
     }
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.container p {
+    margin: 0 0 24px;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.container nav {
+    display: grid;
+    gap: 12px;
+}
+
+.container .btn {
+    text-decoration: none;
+}
+
+.divider {
+    margin: 8px 0 16px;
 }
