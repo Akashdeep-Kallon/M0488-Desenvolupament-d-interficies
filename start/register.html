@@ -5,50 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="sesion&register.css">
-    <title>Monogatarya - Registrarse</title>
+    <title>Monogatarya - Selección de registro</title>
 </head>
 
 <body>
+    <main class="container" aria-labelledby="register-title">
+        <button class="btn-back" type="button" onclick="history.back()" aria-label="Volver a la página anterior">❮</button>
 
-    <div class="container">
-        <button class="btn-back" type="button" onclick="history.back()">❮</button>
+        <h1 id="register-title">Registrarse</h1>
+        <p>Selecciona el tipo de cuenta que quieres crear.</p>
 
-        <h2>Registrarse</h2>
-
-        <form action="../main/index/index.html" method="post">
-
-            <input class="btn-input input-email" type="email" placeholder="Email" required>
-
-            <div class="error-box error-email">
-                <span class="icon">ⓘ</span>
-                <span>Introduce un correo electrónico válido.</span>
-            </div>
-
-            <input class="btn-input input-password" type="password" name="password" placeholder="Contraseña" required
-                minlength="6" maxlength="20" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)$">
-
-            <div class="error-box error-password">
-                <span class="icon">ⓘ</span>
-                <span>La contraseña debe tener al menos 6 caracteres, una mayúscula, una minúscula y un número.</span>
-            </div>
-
-            <input class="btn-input input-confirm" type="password" placeholder="Confirmar Contraseña" required
-                minlength="6" maxlength="20" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$">
-
-            <div class="error-box error-confirm">
-                <span class="icon">ⓘ</span>
-                <span>Las contraseñas no coinciden. Inténtalo de nuevo.</span>
-            </div>
-
-            <input class="btn btn-primary" type="submit" value="Registrarse">
-        </form>
-
-        <label class="remember">
-            <input type="checkbox">
-            Recuérdarme
-        </label>
-    </div>
-
+        <nav aria-label="Tipos de registro">
+            <a class="btn btn-primary" href="register_lector.html">Registro de lector</a>
+            <a class="btn btn-secondary" href="register_promotor.html">Registro de promotor</a>
+        </nav>
+    </main>
 </body>
 
 </html>
