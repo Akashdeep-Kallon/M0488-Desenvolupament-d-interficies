@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="sesion&register.css">
+  <title>Monogatarya | Registro promotor</title>
+</head>
+<body>
+  <main class="container">
+    <h1>Registro de promotor</h1>
+    <form class="form-grid" action="../main/user/user_promotor.html" method="get">
+      <label for="empresa">Empresa / Colectivo
+        <input id="empresa" name="empresa" required minlength="2">
+      </label>
+      <label for="contacto">Persona de contacto
+        <input id="contacto" name="contacto" required minlength="3">
+      </label>
+      <label for="email-promotor">Correo corporativo
+        <input id="email-promotor" name="email" type="email" required>
+      </label>
+      <label for="pass-promotor">Contraseña
+        <input id="pass-promotor" name="password" type="password" required minlength="8" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}">
+      </label>
+      <div class="actions">
+        <button class="btn" type="submit">Crear cuenta</button>
+        <a class="btn secondary" href="register.html">Cambiar tipo</a>
+      </div>
+    </form>
+  </main>
+</body>
+</html>
