@@ -1,54 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="sesion&register.css">
-    <title>Monogatarya - Registrarse</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="sesion&register.css">
+  <title>Monogatarya | Registro</title>
 </head>
-
 <body>
-
-    <div class="container">
-        <button class="btn-back" type="button" onclick="history.back()">❮</button>
-
-        <h2>Registrarse</h2>
-
-        <form action="../main/index/index.html" method="post">
-
-            <input class="btn-input input-email" type="email" placeholder="Email" required>
-
-            <div class="error-box error-email">
-                <span class="icon">ⓘ</span>
-                <span>Introduce un correo electrónico válido.</span>
-            </div>
-
-            <input class="btn-input input-password" type="password" name="password" placeholder="Contraseña" required
-                minlength="6" maxlength="20" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)$">
-
-            <div class="error-box error-password">
-                <span class="icon">ⓘ</span>
-                <span>La contraseña debe tener al menos 6 caracteres, una mayúscula, una minúscula y un número.</span>
-            </div>
-
-            <input class="btn-input input-confirm" type="password" placeholder="Confirmar Contraseña" required
-                minlength="6" maxlength="20" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$">
-
-            <div class="error-box error-confirm">
-                <span class="icon">ⓘ</span>
-                <span>Las contraseñas no coinciden. Inténtalo de nuevo.</span>
-            </div>
-
-            <input class="btn btn-primary" type="submit" value="Registrarse">
-        </form>
-
-        <label class="remember">
-            <input type="checkbox">
-            Recuérdarme
-        </label>
+  <main class="container">
+    <h1>Registro por tipo de usuario</h1>
+    <p>Selecciona el formulario que corresponde a tu perfil.</p>
+    <div class="actions">
+      <a class="btn" href="register_lector.html">Registro de lector</a>
+      <a class="btn" href="register_promotor.html">Registro de promotor</a>
+      <a class="btn secondary" href="sesion.html">Volver al login</a>
     </div>
-
+  </main>
 </body>
-
 </html>
