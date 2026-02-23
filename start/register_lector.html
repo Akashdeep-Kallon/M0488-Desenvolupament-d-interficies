@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="sesion&register.css">
+  <title>Monogatarya | Registro lector</title>
+</head>
+<body>
+  <main class="container">
+    <h1>Registro de lector</h1>
+    <form class="form-grid" action="../main/user/user.html" method="get">
+      <label for="nombre-lector">Nombre completo
+        <input id="nombre-lector" name="nombre" required minlength="3">
+      </label>
+      <label for="email-lector">Correo electrónico
+        <input id="email-lector" name="email" type="email" required>
+      </label>
+      <label for="nick-lector">Nombre de usuario
+        <input id="nick-lector" name="nick" required minlength="4">
+      </label>
+      <label for="pass-lector">Contraseña
+        <input id="pass-lector" name="password" type="password" required minlength="8" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}">
+      </label>
+      <div class="actions">
+        <button class="btn" type="submit">Crear cuenta</button>
+        <a class="btn secondary" href="register.html">Cambiar tipo</a>
+      </div>
+    </form>
+  </main>
+</body>
+</html>
