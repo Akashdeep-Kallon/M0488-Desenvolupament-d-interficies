@@ -1,51 +1,199 @@
+/* RESET */
+* {
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+html,
 body {
-  margin: 0;
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
-  font-family: Inter, Arial, sans-serif;
-  color: #fff;
-  background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.7)), url('background-image.png') center/cover no-repeat;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
 }
 
+/* BODY */
+body {
+    background-image: url("background-image.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/* CONTAINER */
 .container {
-  width: min(560px, 92vw);
-  background: rgba(17, 17, 17, 0.88);
-  border: 1px solid #444;
-  border-radius: 14px;
-  padding: 1.2rem;
+    width: 100%;
+    max-width: 440px;
+    height: 100%;
+    padding: 40px 30px;
+    background: rgba(0, 0, 0, 0.65);
+    text-align: center;
 }
 
-h1 { margin-top: 0; font-size: clamp(1.4rem, 3vw, 2rem); }
-
-.form-grid { display: grid; gap: .9rem; }
-label { font-weight: 600; }
-input, select {
-  width: 100%;
-  margin-top: .35rem;
-  min-height: 2.7rem;
-  padding: .6rem .75rem;
-  border-radius: 8px;
-  border: 1px solid #666;
-  background: #222;
-  color: #fff;
+.container h2 {
+    font-size: clamp(28px, 4vw, 42px);
+    margin-bottom: 30px;
 }
 
-.actions { display: flex; gap: .6rem; flex-wrap: wrap; margin-top: .5rem; }
+/* BOTONES */
 .btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  border-radius: 8px;
-  min-height: 2.7rem;
-  border: none;
-  padding: 0 1rem;
-  background: #ff4141;
-  color: #fff;
-  font-weight: 600;
-  cursor: pointer;
+    width: 100%;
+    max-width: 373px;
+    height: 73px;
+    font-size: 22px;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    user-select: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    transition: transform 0.12s ease;
 }
-.btn.secondary { background: #393939; }
 
-small { color: #ddd; }
+.btn:active {
+    transform: scale(0.96);
+}
+
+.btn-primary {
+    background: rgba(255, 255, 255, 0.9);
+    color: black;
+    margin-bottom: 20px;
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+/* INPUTS */
+.btn-input {
+    width: 100%;
+    max-width: 373px;
+    height: 73px;
+    margin-bottom: 12px;
+    padding: 0 20px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.18);
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.btn-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* BACK BUTTON */
+.btn-back {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.6);
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.btn-back:hover {
+    color: #FF4141;
+}
+
+.btn-back:active {
+    transform: scale(0.96);
+}
+
+/* ESTADOS DE ERROR */
+.error-box {
+    width: 100%;
+    max-width: 373px;
+    margin: 8px auto 18px;
+    padding: 10px 14px;
+    background: #ffbaba;
+    color: #9c0000;
+    font-size: 14px;
+    border-radius: 6px;
+    display: none;
+    gap: 8px;
+    align-items: center;
+}
+
+/* Ocultar errores por defecto */
+.error-box {
+    display: none;
+}
+
+.btn-input:required:invalid:not(:placeholder-shown) {
+    border: 2px solid #ff4d4d;
+    background: rgba(255, 77, 77, 0.2);
+}
+
+/* Email inválido */
+form:has(.input-email:invalid:not(:placeholder-shown)) .error-email {
+    display: flex;
+}
+
+/* Contraseña inválida */
+form:has(.input-password:invalid:not(:placeholder-shown)) .error-password {
+    display: flex;
+}
+
+/* Confirmación inválida */
+form:has(.input-confirm:invalid:not(:placeholder-shown)) .error-confirm {
+    display: flex;
+}
+
+
+/* REMEMBER */
+.remember {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* TABLET */
+@media (max-width: 768px) {
+    .container {
+        padding: 30px 24px;
+    }
+
+    .btn,
+    .btn-input {
+        height: 60px;
+        font-size: 18px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+    body {
+        align-items: flex-start;
+    }
+
+    .container {
+        height: 100%;
+        padding: 24px 18px;
+    }
+
+    .btn,
+    .btn-input {
+        height: 54px;
+        font-size: 16px;
+    }
+
+    .container h2 {
+        margin-bottom: 20px;
+    }
+}
