@@ -282,3 +282,100 @@ header {
     clip: rect(0, 0, 0, 0);
     border: 0;
 }
+
+/* ===== Sistema global de contenido ===== */
+.page-main {
+    padding: 1.5rem 0 2.5rem;
+}
+
+.layout-container {
+    width: min(1180px, 92vw);
+    margin: 0 auto;
+    display: grid;
+    gap: 1.25rem;
+}
+
+.card-panel {
+    background: #fff;
+    color: #111;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+    padding: 1.5rem;
+}
+
+.card-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.card-grid-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.content-card {
+    background: #f3f3f3;
+    border-radius: 12px;
+    padding: 1rem;
+}
+
+.section-title {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #111;
+}
+
+.inline-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
+    margin-top: 1rem;
+}
+
+.btn-link {
+    display: inline-block;
+    background: #ff4141;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    padding: .55rem .8rem;
+    font-weight: 600;
+}
+
+.field-group {
+    display: grid;
+    gap: .45rem;
+}
+
+.field-group label {
+    font-weight: 600;
+    color: #222;
+}
+
+.field-group input,
+.field-group textarea {
+    width: 100%;
+    border: 1px solid #c9c9c9;
+    border-radius: 10px;
+    padding: .75rem;
+    font-size: 1rem;
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .card-grid-3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .layout-container {
+        width: 95vw;
+    }
+
+    .card-panel {
+        padding: 1rem;
+    }
+
+    .card-grid-3 {
+        grid-template-columns: 1fr;
+    }
+}

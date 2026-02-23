@@ -49,52 +49,33 @@
         </div>
     </header>
 
-    <div id="principal">
-        <section class="si">
-            <div class="titleContainer">
-                <h2>Eventos</h2>
-            </div>
-        </section>
 
-        <form class="formulario-ver">
-
-            <div class="contenedor-imagen">
-                <div class="preview-grande">
-                    <span>IMAGEN DEL EVENTO</span>
-                </div>
-            </div>
-
-            <div class="info-ver">
-                <div class="campo">
-                    <input type="text" name="nombre" value="Nombre del evento" readonly required>
-                </div>
-
-                <div class="campo">
-                    <textarea name="descripcion" readonly required minlength="10">Descripción</textarea>
-                </div>
-
-                <div class="campo">
-                    <input type="date" name="fecha" value="Fecha" readonly required>
-                </div>
-
-                <div class="campo">
-                    <input type="text" name="lugar" value="Lugar" readonly required>
-                </div>
-            </div>
-
-            <div class="botones">
-                <button type="submit" class="btn btn-add">Reservar</button>
-                <button type="reset" class="btn btn-delete">Anular</button>
-            </div>
-        </form>
-        <div class="error-box">
-            <span class="icon">ⓘ</span>
-            <span>No se ha podido realizar la acción correctamente.</span>
+    <main class="page-main">
+        <div class="layout-container">
+            <article class="card-panel event-editorial" aria-labelledby="evento-titulo">
+                <section>
+                    <h2 id="evento-titulo" class="section-title">Salón Monogatarya 2026</h2>
+                    <figure class="event-hero-image">
+                        <img src="../../index/gallery/card-onePiece.jpg" alt="Escenario principal del evento de manga y anime">
+                    </figure>
+                    <p>Encuentro anual para lectores, coleccionistas y promotores. Incluye presentaciones de autores, firmas, talleres y zona de exposición.</p>
+                </section>
+                <aside class="event-aside" aria-labelledby="datos-evento">
+                    <h3 id="datos-evento">Datos del evento</h3>
+                    <dl>
+                        <dt>Fecha</dt><dd>20/11/2026</dd>
+                        <dt>Ubicación</dt><dd>Fira Barcelona - Pabellón 3</dd>
+                        <dt>Aforo</dt><dd>5.000 asistentes</dd>
+                        <dt>Horario</dt><dd>10:00 - 21:00</dd>
+                    </dl>
+                    <div class="stack-actions">
+                        <button type="button" class="btn btn-add">Reservar plaza</button>
+                        <button type="button" class="btn btn-delete">Anular reserva</button>
+                    </div>
+                </aside>
+            </article>
         </div>
-    </div>
-
-
-
+    </main>
 
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
     <symbol id="menu" viewBox="0 0 522 478">

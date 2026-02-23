@@ -50,41 +50,55 @@
         </div>
     </header>
 
-    <article>
-        <section>
-            <div class="gallery">
 
-                <input type="radio" name="slider" id="s1" checked>
-                <input type="radio" name="slider" id="s2">
-                <input type="radio" name="slider" id="s3">
-
-                <div class="cards">
-                    <label for="s1" class="card">
-                        <img src="gallery/card-onePiece.jpg" alt="Manga/anime One Piece">
-                    </label>
-
-                    <label for="s2" class="card">
-                        <img src="gallery/card-dragonBall.jpg" alt="Manga/anime DBZ">
-                    </label>
-
-                    <label for="s3" class="card">
-                        <img src="gallery/card-shingekyNoKyojin.jpg" alt="Manga/anime Attack on Titan">
-                    </label>
+    <main class="page-main" id="contenido-principal">
+        <div class="layout-container">
+            <section class="card-panel home-hero" aria-labelledby="hero-title">
+                <div>
+                    <h2 id="hero-title">Bienvenido a Monogatarya</h2>
+                    <p>Descubre novedades de manga y anime, gestiona tu perfil y reserva eventos desde una experiencia responsive y accesible.</p>
+                    <div class="inline-actions">
+                        <a class="btn-link" href="../events/event/m_event.html">Ver evento destacado</a>
+                        <a class="btn-link" href="../events/catalogo/animes.html">Explorar catálogo</a>
+                    </div>
                 </div>
-            </div>
-        </section>
-        <section>
-            <div class="titleContainer">
-                <h2>Últimos mangas publicados</h2>
-            </div>
-        </section>
-        <section>
-            <div>
+                <div class="gallery" aria-label="Galería destacada">
+                    <input type="radio" name="slider" id="s1" checked>
+                    <input type="radio" name="slider" id="s2">
+                    <input type="radio" name="slider" id="s3">
+                    <div class="cards">
+                        <label for="s1" class="card">
+                            <img src="gallery/card-onePiece.jpg" alt="Portada de One Piece">
+                        </label>
+                        <label for="s2" class="card">
+                            <img src="gallery/card-dragonBall.jpg" alt="Portada de Dragon Ball Z">
+                        </label>
+                        <label for="s3" class="card">
+                            <img src="gallery/card-shingekyNoKyojin.jpg" alt="Portada de Attack on Titan">
+                        </label>
+                    </div>
+                </div>
+            </section>
 
-            </div>
-        </section>
-    </article>
-
+            <section class="card-panel" aria-labelledby="ultimos-title">
+                <h2 id="ultimos-title" class="section-title">Últimos lanzamientos</h2>
+                <div class="card-grid card-grid-3">
+                    <article class="content-card">
+                        <h3>One Piece 112</h3>
+                        <p>Nuevo arco argumental con edición especial y análisis editorial.</p>
+                    </article>
+                    <article class="content-card">
+                        <h3>Dragon Ball Daima</h3>
+                        <p>Nueva temporada disponible con calendario completo de emisión.</p>
+                    </article>
+                    <article class="content-card">
+                        <h3>Shingeki Final</h3>
+                        <p>Reedición coleccionista y debate de comunidad en el próximo evento.</p>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
 
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
     <symbol id="menu" viewBox="0 0 522 478">

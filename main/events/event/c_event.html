@@ -49,43 +49,44 @@
         </div>
     </header>
 
-    <div id=principal>
-        <div>
-            <h2>Crear evento (promotor):</h2>
-            <div class="linea"></div>
-        </div>
 
-        <form class="formulario">
-
-            <div class="imagen">
-                <div class="contenedor-imagen">
-                    <div class="preview">
+    <main class="page-main">
+        <div class="layout-container">
+            <section class="card-panel" aria-labelledby="crear-evento-title">
+                <h2 id="crear-evento-title" class="section-title">Crear evento (promotor)</h2>
+                <form class="form-vertical" action="m_event.html" method="post">
+                    <div class="field-group">
+                        <label for="imagen">Imagen del evento</label>
+                        <input id="imagen" type="file" name="imagen" accept="image/*" required>
                     </div>
-                </div>
-
-                <label class="subirImg">
-                    <input type="file" name="imagen" accept="image/*" required>
-                    <span>Foto evento</span>
-                </label>
-            </div>
-
-            <div class="info-ver">
-                <input type="text" name="nombre" placeholder="Nombre del evento" required minlength="3" maxlength="50">
-                <textarea name="descripcion" placeholder="Descripción" required minlength="10"
-                    maxlength="300"></textarea>
-                <input type="date" name="fecha" required>
-                <input type="text" name="lugar" placeholder="Lugar" required minlength="3">
-                <input type="text" name="promotores" placeholder="Promotores" required>
-            </div>
-
-            <div class="botones">
-                <button type="submit" class="btn btn-add">Añadir</button>
-                <button type="reset" class="btn btn-delete">Cancelar</button>
-            </div>
-    </div>
-
-
-
+                    <div class="field-group">
+                        <label for="nombre-evento">Nombre del evento</label>
+                        <input id="nombre-evento" type="text" name="nombre" required minlength="3" maxlength="50">
+                    </div>
+                    <div class="field-group">
+                        <label for="descripcion-evento">Descripción</label>
+                        <textarea id="descripcion-evento" name="descripcion" required minlength="10" maxlength="300"></textarea>
+                    </div>
+                    <div class="field-group">
+                        <label for="fecha-evento">Fecha</label>
+                        <input id="fecha-evento" type="date" name="fecha" required>
+                    </div>
+                    <div class="field-group">
+                        <label for="lugar-evento">Lugar</label>
+                        <input id="lugar-evento" type="text" name="lugar" required minlength="3">
+                    </div>
+                    <div class="field-group">
+                        <label for="aforo">Aforo</label>
+                        <input id="aforo" type="number" name="aforo" min="50" required>
+                    </div>
+                    <div class="inline-actions">
+                        <button type="submit" class="btn btn-add">Publicar evento</button>
+                        <button type="reset" class="btn btn-delete">Cancelar</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </main>
 
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
     <symbol id="menu" viewBox="0 0 522 478">
