@@ -10,14 +10,19 @@
 
 <body>
     <main class="container" aria-labelledby="register-title">
-        <button class="btn-back" type="button" onclick="history.back()" aria-label="Volver a la página anterior">❮</button>
+        <button class="btn-back" type="button" onclick="history.back()"
+            aria-label="Volver a la página anterior">❮</button>
 
         <h1 id="register-title">Registrarse</h1>
         <p>Selecciona el tipo de cuenta que quieres crear.</p>
 
         <nav aria-label="Tipos de registro">
-            <a class="btn btn-primary" href="register_lector.html">Registro de lector</a>
-            <a class="btn btn-secondary" href="register_promotor.html">Registro de promotor</a>
+            <form action="register_lector.html">
+                <button class="btn btn-primary" type="submit">Registro de lector</button>
+            </form>
+            <form action="register_promotor.html">
+                <button class="btn btn-primary" type="submit">Registro de promotor</button>
+            </form>
         </nav>
     </main>
 </body>
