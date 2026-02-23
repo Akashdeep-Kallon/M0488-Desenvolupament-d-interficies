@@ -111,7 +111,7 @@ body {
     transform: scale(0.96);
 }
 
-/* ERROR BOX */
+/* ESTADOS DE ERROR */
 .error-box {
     width: 100%;
     max-width: 373px;
@@ -121,14 +121,36 @@ body {
     color: #9c0000;
     font-size: 14px;
     border-radius: 6px;
-    display: flex;
+    display: none;
     gap: 8px;
     align-items: center;
 }
 
-.error-box .icon {
-    font-weight: bold;
+/* Ocultar errores por defecto */
+.error-box {
+    display: none;
 }
+
+.btn-input:required:invalid:not(:placeholder-shown) {
+    border: 2px solid #ff4d4d;
+    background: rgba(255, 77, 77, 0.2);
+}
+
+/* Email inválido */
+form:has(.input-email:invalid:not(:placeholder-shown)) .error-email {
+    display: flex;
+}
+
+/* Contraseña inválida */
+form:has(.input-password:invalid:not(:placeholder-shown)) .error-password {
+    display: flex;
+}
+
+/* Confirmación inválida */
+form:has(.input-confirm:invalid:not(:placeholder-shown)) .error-confirm {
+    display: flex;
+}
+
 
 /* REMEMBER */
 .remember {

@@ -21,7 +21,7 @@
             <h1>MONOGATARYA</h1>
             <div class="right-group">
 
-                 <a href="user_promotor.html">
+                <a href="user_promotor.html">
                     <button class="icon-btn white" aria-label="Usuario">
                         <svg class="icon">
                             <use href="#usuario"></use>
@@ -33,56 +33,42 @@
     </header>
 
     <article class="perfil-container">
-    <h2 class="perfil-titulo">Perfil del usuario (Promotor):</h2>
+        <h2 class="perfil-titulo">Perfil del usuario (Promotor):</h2>
 
-    <form class="perfil-card">
+        <form class="perfil-card">
 
-        <div class="perfil-left">
-            <svg class="avatar icon">
-                <use href="#usuario"></use>
-            </svg>
+            <div class="perfil-left">
+                <svg class="avatar icon">
+                    <use href="#usuario"></use>
+                </svg>
 
-            <label class="btn-foto">
-                Cambiar Foto
-                <input type="file" accept="image/*" hidden>
-            </label>
-        </div>
+                <label class="btn-foto">
+                    Cambiar Foto
+                    <input type="file" accept="image/*" hidden>
+                </label>
+            </div>
 
-        <div class="perfil-right">
+            <div class="perfil-right">
 
-            <input type="text"
-                   placeholder="Nombre"
-                   required
-                   minlength="2"
-                   maxlength="30">
+                <input type="text" placeholder="Nombre" required minlength="2" maxlength="30">
 
-            <input type="text"
-                   placeholder="Apellido"
-                   required
-                   minlength="2"
-                   maxlength="40">
+                <input type="text" placeholder="Apellido" required minlength="2" maxlength="40">
 
-            <input type="text"
-                   placeholder="Nombre de usuario"
-                   required
-                   minlength="4"
-                   maxlength="20">
+                <input type="text" placeholder="Nombre de usuario" required minlength="4" maxlength="20">
 
-            <input type="password"
-                   placeholder="Contraseña"
-                   required
-                   minlength="6"
-                   maxlength="20">
+                <input type="password" placeholder="Contraseña" required minlength="6" maxlength="20"
+                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)$"
+                    title="La contraseña debe tener al menos 6 caracteres, una mayúscula, una minúscula y un número.">
 
-        </div>
+            </div>
 
-        <div class="perfil-botones">
-            <button type="submit" class="btn btn-add">Guardar</button>
-            <button type="reset" class="btn btn-delete">Borrar Cuenta</button>
-        </div>
+            <div class="perfil-botones">
+                <button type="submit" class="btn btn-add">Guardar</button>
+                <button type="reset" class="btn btn-delete">Borrar Cuenta</button>
+            </div>
 
-    </form>
-</article>
+        </form>
+    </article>
 
 </body>
 
