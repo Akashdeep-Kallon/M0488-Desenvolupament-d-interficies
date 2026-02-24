@@ -1,3 +1,18 @@
+:root {
+    --bg: #111;
+    --surface: #1f1f1f;
+    --surface-2: #2a2a2a;
+    --border: #343434;
+    --text: #f5f5f5;
+    --muted: #bdbdbd;
+    --accent: #ff4141;
+    --focus: #ff8c8c;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 /* OCULTAR SCROLLBAR */
 body {
     scrollbar-width: none;
@@ -24,33 +39,56 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 100%;
-    background: #000;
-    color: white;
-    font-family: 'Inter', sans-serif;
+    min-height: 100%;
+    background: var(--bg);
+    color: var(--text);
+    font-family: Inter, Arial, sans-serif;
 }
 
-/* ESPACIO PARA HEADER FIJO */
+html {
+    font-size: 16px;
+}
+
 body {
+    line-height: 1.5;
     padding-top: 90px;
+}
+
+h2 {
+    font-size: clamp(1.45rem, 2.8vw, 2rem);
+    margin-top: 0;
+}
+
+h3 {
+    font-size: clamp(1.1rem, 2vw, 1.35rem);
+}
+
+.btn,
+.btn-link,
+.menu-width a,
+.icon-btn,
+input,
+textarea {
+    transition: background-color .2s ease, color .2s ease, border-color .2s ease, transform .12s ease, box-shadow .12s ease;
 }
 
 /* BOTONES GENERALES */
 .btn {
-    width: 90%;
-    max-width: 373px;
-    height: 73px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    font-size: 22px;
-    font-weight: 600;
-    color: #000;
-    border: none;
+    border: 1px solid transparent;
     border-radius: 10px;
+    color: #000;
+    text-decoration: none;
     cursor: pointer;
-    transition: transform 0.12s ease, box-shadow 0.12s ease;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    font-weight: 600;
+    min-height: 2.8rem;
+    padding: 0.5rem 0.95rem;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
 }
 
 .btn:active {
@@ -60,11 +98,14 @@ body {
 
 /* BOTONES DE ACCIÓN */
 .btn-add {
-    background-color: rgba(135, 255, 157, 0.9);
+    background: #303030;
+    border-color: #4a4a4a;
+    color: #fff;
 }
 
 .btn-delete {
-    background-color: rgba(255, 65, 65, 0.9);
+    background: var(--accent);
+    color: #fff;
 }
 
 /* BOTONES DE ICONO */
@@ -78,7 +119,6 @@ body {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    transition: transform 0.12s ease, box-shadow 0.12s ease;
 }
 
 .icon-btn:active {
@@ -91,7 +131,6 @@ body {
     width: 40px;
     height: 30px;
     fill: currentColor;
-    transition: color 0.2s ease, transform 0.12s ease;
 }
 
 .icon-btn.white {
@@ -102,11 +141,11 @@ body {
 .icon-btn.red {
     width: 40px;
     height: 40px;
-    color: #FF4141;
+    color: var(--accent);
 }
 
 .icon-btn:hover .icon {
-    color: #FF4141;
+    color: var(--accent);
 }
 
 /* HEADER */
@@ -141,7 +180,7 @@ header {
     font-weight: bold;
 }
 
-.header-gruop button[aria-label="Usuario"] .icon {
+.header-gruop .user-link .icon {
     width: 40px;
     height: 40px;
 }
@@ -162,16 +201,17 @@ header {
     height: 44px;
     padding: 0 14px;
     border-radius: 50px;
-    border: 2px solid #FF4141;
+    border: 2px solid var(--accent);
     background: transparent;
-    width: 300px;
+    width: min(300px, 36vw);
 }
 
 .search-input {
+    width: 100%;
     height: 100%;
     line-height: 1;
     font-size: 16px;
-    color: white;
+    color: var(--text);
     outline: none;
     border: none;
     background: transparent;
@@ -189,6 +229,7 @@ header {
     width: 80%;
     max-width: 300px;
     height: 100%;
+    overflow-y: auto;
     background: #1b1b1b;
     padding-top: 120px;
     list-style: none;
@@ -204,16 +245,16 @@ header {
 
 .menu-width li a {
     text-decoration: none;
-    color: white;
+    color: var(--text);
     font-size: 18px;
 }
 
 .menu-width li a:hover {
-    color: #FF4141;
+    color: var(--accent);
 }
 
 .menu-width .logout a {
-    color: #FF4141;
+    color: var(--accent);
 }
 
 #menu-toggle:checked~.menu-width {
@@ -222,7 +263,6 @@ header {
 
 /* TABLET */
 @media screen and (max-width: 768px) {
-
     body {
         padding-top: 80px;
     }
@@ -256,7 +296,6 @@ header {
 
 /* MÓVIL */
 @media screen and (max-width: 480px) {
-
     body {
         padding-top: 70px;
     }
@@ -269,7 +308,6 @@ header {
         width: 100%;
         max-width: none;
     }
-
 }
 
 .sr-only {
@@ -281,4 +319,145 @@ header {
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
     border: 0;
+}
+
+/* ===== Sistema global de contenido ===== */
+.page-main {
+    padding: 1.5rem 0 2.5rem;
+}
+
+.layout-container {
+    width: min(1180px, 92vw);
+    margin: 0 auto;
+    display: grid;
+    gap: 1.25rem;
+}
+
+.card-panel {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+    padding: 1.5rem;
+}
+
+.card-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.card-grid-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.content-card {
+    background: var(--surface-2);
+    border-radius: 12px;
+    padding: 1rem;
+}
+
+.content-card p {
+    color: #c8c8c8;
+}
+
+.section-title {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.inline-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
+    margin-top: 1rem;
+}
+
+.btn-link {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: .55rem .8rem;
+    font-weight: 600;
+}
+
+.btn-link:hover {
+    background: #e43636;
+}
+
+.field-group {
+    display: grid;
+    gap: .45rem;
+}
+
+.field-group label {
+    font-weight: 600;
+    color: var(--text);
+}
+
+.field-group input,
+.field-group textarea {
+    width: 100%;
+    background: #181818;
+    border: 1px solid #5a5a5a;
+    color: var(--text);
+    margin-top: 0.35rem;
+    min-height: 2.7rem;
+    border-radius: 8px;
+    padding: 0.6rem 0.75rem;
+    font: inherit;
+}
+
+textarea {
+    min-height: 6.5rem;
+    resize: vertical;
+}
+
+.container {
+    width: min(1100px, 92vw);
+    margin: 0 auto;
+}
+
+footer {
+    border-top: 1px solid #333;
+    color: var(--muted);
+    padding: 1rem 0;
+    text-align: center;
+}
+
+:where(a, button, input, textarea, select):focus-visible {
+    outline: 3px solid var(--focus);
+    outline-offset: 2px;
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .card-grid-3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .layout-container {
+        width: 95vw;
+    }
+
+    .card-panel {
+        padding: 1rem;
+    }
+
+    .card-grid-3 {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
 }

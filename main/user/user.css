@@ -1,211 +1,85 @@
-/* RESET ALTURA */
-html,
-body {
-    height: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
-}
-
-/* CONTENEDOR PERFIL */
-.perfil-container {
-    max-width: 1000px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 40px 30px;
-    box-sizing: border-box;
-}
-
-/* TITULO PERFIL */
-.perfil-titulo {
-    font-size: 28px;
-    margin-bottom: 30px;
-    position: relative;
-}
-
-.perfil-titulo::after {
-    content: "";
-    display: block;
-    width: 300px;
-    height: 3px;
-    background: #ff4141;
-    margin-top: 8px;
-}
-
-/* CARD PERFIL */
-.perfil-card {
+/* ===== Layout general ===== */
+.profile-layout {
     display: grid;
-    grid-template-columns: 250px 1fr;
-    gap: 40px;
-    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
 }
 
-/* LADO IZQUIERDO PERFIL */
-.perfil-left {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
+/* ===== Caja avatar ===== */
+.avatar-box {
+    display: grid;
+    place-items: center;
+    background: #2a2a2a;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
 }
 
-/* AVATAR */
-.avatar {
-    width: 130px;
-    height: 130px;
+.avatar-box img {
+    width: min(220px, 60%);
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    border: 2px solid #666;
+    margin-bottom: 1rem;
 }
 
-.avatar svg {
-    width: 70px;
-    height: 70px;
+/* input file */
+.file-label {
+    font-weight: 600;
+    margin-bottom: .4rem;
+    display: block;
 }
 
-/* BOTON FOTO */
-.btn-foto {
-    background: transparent;
-    color: white;
-    border: 1px solid white;
-    padding: 8px 16px;
-    border-radius: 6px;
-    cursor: pointer;
+.avatar-box input[type="file"] {
+    width: 100%;
 }
 
-/* LADO DERECHO PERFIL */
-.perfil-right {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+/* ===== Formulario ===== */
+.profile-form {
+    display: grid;
+    gap: 1rem;
 }
 
-.perfil-right input {
-    background-color: #444;
-    border: 2px solid #555;
-    padding: 15px;
+.field label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: .35rem;
+}
+
+.field input,
+.field textarea {
+    width: 100%;
+    background: #181818;
+    border: 1px solid #5a5a5a;
     border-radius: 8px;
-    color: white;
-    font-size: 18px;
-    outline: none;
+    padding: .65rem .75rem;
+    color: #f5f5f5;
+    font-size: 1rem;
 }
 
-.perfil-right input::placeholder {
-    color: #bbb;
+.field textarea {
+    min-height: 80px;
+    resize: vertical;
 }
 
-/* BOTONES PERFIL - DESKTOP */
-.perfil-botones {
+.field.full {
+    grid-column: 1 / -1;
+}
+
+/* ===== Botones ===== */
+.profile-actions {
     display: flex;
-    justify-content: flex-start; 
-    gap: 40px;
-    margin-left: 0;
+    gap: .8rem;
+    flex-wrap: wrap;
 }
 
-.perfil-botones .btn {
-    flex: 1 1 auto;
-    max-width: 400px;
-    min-width: 300px;
-    padding: 14px 0;
-    font-size: 20px;
-    border-radius: 8px;
-    cursor: pointer;
+:where(.field input, .field textarea, .avatar-box input[type="file"]):focus-visible {
+    outline: 3px solid #ff9f9f;
+    outline-offset: 2px;
 }
 
-
-
-
-/* =====================
-   TABLET
-===================== */
-
-@media screen and (max-width: 768px) {
-
-    .perfil-container {
-        padding: 30px 20px;
-    }
-
-    .perfil-card {
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .profile-layout {
         grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    .perfil-titulo {
-        font-size: 24px;
-    }
-
-    .perfil-titulo::after {
-        width: 200px;
-    }
-
-    .avatar {
-        width: 110px;
-        height: 110px;
-    }
-
-    .avatar svg {
-        width: 60px;
-        height: 60px;
-    }
-
-    .perfil-right input {
-        font-size: 16px;
-        padding: 13px;
-    }
-
-    .perfil-botones {
-        margin-left: 0;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .perfil-botones .btn {
-        min-width: 280px;
-        width: 90%;
-    }
-}
-
-/* =====================
-   MOVIL
-===================== */
-
-@media screen and (max-width: 480px) {
-
-    .perfil-container {
-        padding: 25px 15px;
-    }
-
-    .perfil-titulo {
-        font-size: 22px;
-    }
-
-    .perfil-titulo::after {
-        width: 160px;
-    }
-
-    .avatar {
-        width: 95px;
-        height: 95px;
-    }
-
-    .avatar svg {
-        width: 50px;
-        height: 50px;
-    }
-
-    .btn-foto {
-        font-size: 14px;
-        padding: 6px 12px;
-    }
-
-    .perfil-right input {
-        font-size: 15px;
-        padding: 12px;
-    }
-
-    .perfil-botones .btn {
-        min-width: 0;
-        width: 100%;
-        font-size: 18px;
     }
 }

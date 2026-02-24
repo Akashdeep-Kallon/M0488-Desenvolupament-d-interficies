@@ -1,102 +1,46 @@
-/* CONTENEDOR GENERAL */
-article {
-    width: 100%;
-    padding: 30px;
-}
-
-/* CATÁLOGO */
-.catalogo {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 30px 20px 60px;
-}
-
-/* TÍTULO DEL CATÁLOGO */
-.catalogo-titulo {
-    background: #d63a3a;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    margin-bottom: 40px;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-/* PÁGINAS DEL CATÁLOGO */
+/* Ocultar todas las páginas */
 .pagina {
     display: none;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
+#page1 {
+    display: grid;
+}
+
+/* Mostrar solo la página activa */
 .pagina:target {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
 }
 
-/* TARJETAS */
-.card {
-    text-align: left;
-}
-
-.card .img {
-    width: 100%;
-    height: 160px;
-    background: #3a3a3a;
-    border: 2px solid #222;
-}
-
-.card p {
-    margin-top: 10px;
-    font-size: 15px;
-}
-
-/* PAGINACIÓN */
+/* Paginación */
 .paginacion {
     text-align: center;
-    margin-top: 50px;
-    font-size: 18px;
+    margin-top: 1.8rem;
 }
 
 .paginacion a {
-    color: white;
+    color: #ff4141;
+    font-weight: 600;
     text-decoration: none;
-    margin: 0 8px;
+    margin: 0 10px;
+    border-radius: 6px;
+    padding: .2rem .45rem;
 }
 
 .paginacion a:hover {
-    color: #d63a3a;
+    text-decoration: underline;
 }
 
-/* TABLET */
-@media screen and (max-width: 768px) {
-
-    .pagina:target {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
-    }
-
-    .catalogo-titulo {
-        font-size: 24px;
-    }
+.paginacion a:focus-visible {
+    outline: 3px solid #ff9f9f;
+    outline-offset: 2px;
 }
 
-/* MÓVIL */
-@media screen and (max-width: 480px) {
-
-    .pagina:target {
-        grid-template-columns: 1fr;
-        gap: 25px;
-    }
-
-    .catalogo {
-        padding: 20px 15px 40px;
-    }
-
-    .catalogo-titulo {
-        font-size: 22px;
-        padding: 12px;
+@media (max-width: 600px) {
+    .paginacion {
+        display: flex;
+        justify-content: center;
+        gap: 0.75rem;
+        flex-wrap: wrap;
     }
 }

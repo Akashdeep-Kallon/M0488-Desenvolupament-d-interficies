@@ -1,6 +1,16 @@
+:root {
+    --accent: #ff4141;
+    --text: #ffffff;
+    --surface: rgba(31, 31, 31, 0.95);
+}
+
+* {
+    box-sizing: border-box;
+}
+
 .btn {
     width: 140px;
-    height: 50px;
+    min-height: 50px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -10,18 +20,22 @@
     border-radius: 10px;
     cursor: pointer;
     user-select: none;
-    transition: transform 0.12s ease, box-shadow 0.12s ease;
+    transition: transform 0.12s ease, box-shadow 0.12s ease, background-color .2s ease;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 .btn-sesion {
-    color: rgba(0, 0, 0, 0.71);
+    color: rgba(0, 0, 0, 0.85);
     background-color: rgba(255, 255, 255, 0.91);
 }
 
 .btn-register {
-    color: rgba(255, 255, 255, 0.71);
-    background-color: rgba(31, 31, 31, 0.95);
+    color: rgba(255, 255, 255, 0.88);
+    background-color: var(--surface);
+}
+
+.btn:hover {
+    transform: translateY(-1px);
 }
 
 .btn:active {
@@ -32,13 +46,12 @@
 html,
 body {
     overflow-x: hidden;
-    overflow-y: hidden;
+    overflow-y: auto;
     margin: 0;
     padding: 0;
     min-height: 100%;
-    color: white;
+    color: var(--text);
     font-family: Inter, Arial, sans-serif;
-
     background: linear-gradient(rgba(0, 0, 0, .55), rgba(0, 0, 0, .6)),
         url("background-image.png") center/cover no-repeat;
 }
@@ -47,7 +60,7 @@ body {
     display: flex;
     align-items: center;
     min-height: 100px;
-    background-color: rgba(31, 31, 31, 0.95);
+    background-color: var(--surface);
     padding: 5px 20px;
 }
 
@@ -86,10 +99,20 @@ main {
     max-width: 12ch;
 }
 
+.hero p {
+    max-width: 60ch;
+    color: rgba(255, 255, 255, 0.9);
+}
+
 footer {
     color: #ddd;
     text-align: center;
     padding-bottom: 1rem;
+}
+
+:where(a, button):focus-visible {
+    outline: 3px solid #ff9f9f;
+    outline-offset: 2px;
 }
 
 @media (max-width: 768px) {
@@ -99,7 +122,7 @@ footer {
 
     .btn {
         width: 128px;
-        height: 44px;
+        min-height: 44px;
         font-size: 16px;
     }
 }
@@ -115,5 +138,9 @@ footer {
     .right-group {
         width: 100%;
         justify-content: center;
+    }
+
+    main {
+        min-height: calc(100vh - 130px);
     }
 }

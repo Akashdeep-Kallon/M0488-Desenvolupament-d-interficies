@@ -10,13 +10,15 @@
 
 <body>
     <main class="container" aria-labelledby="register-reader-title">
-        <button class="btn-back" type="button" onclick="history.back()" aria-label="Volver a la página anterior">❮</button>
+        <button class="btn-back" type="button" onclick="history.back()"
+            aria-label="Volver a la página anterior">❮</button>
 
         <h1 id="register-reader-title">Registro de lector</h1>
 
         <form action="../main/index/index.html" method="post">
             <label class="sr-only" for="reader-email">Correo electrónico</label>
-            <input id="reader-email" name="email" class="btn-input input-email" type="email" placeholder="Email" required>
+            <input id="reader-email" name="email" class="btn-input input-email" type="email" placeholder="Email"
+                required>
 
             <div class="error-box error-email">
                 <span class="icon">ⓘ</span>
@@ -24,8 +26,9 @@
             </div>
 
             <label class="sr-only" for="reader-password">Contraseña</label>
-            <input id="reader-password" class="btn-input input-password" type="password" name="password" placeholder="Contraseña"
-                required minlength="6" maxlength="20" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}$"
+            <input id="reader-password" class="btn-input input-password" type="password" name="password"
+                placeholder="Contraseña" required minlength="6" maxlength="20"
+                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}$"
                 title="La contraseña debe tener al menos 6 caracteres, una mayúscula, una minúscula y un número.">
 
             <div class="error-box error-password">
@@ -34,8 +37,9 @@
             </div>
 
             <label class="sr-only" for="reader-confirm">Confirmar contraseña</label>
-            <input id="reader-confirm" class="btn-input input-confirm" type="password" placeholder="Confirmar Contraseña" required
-                minlength="6" maxlength="20" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}$">
+            <input id="reader-confirm" class="btn-input input-confirm" type="password"
+                placeholder="Confirmar Contraseña" required minlength="6" maxlength="20"
+                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}$">
 
             <div class="error-box error-confirm">
                 <span class="icon">ⓘ</span>
