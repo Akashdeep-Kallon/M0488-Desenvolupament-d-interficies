@@ -17,13 +17,12 @@ use monogatarya;
 -- Crear tabla Usuarios --
 create table if not exists Users
 (
-    email varchar(50),
-    status boolean default false,
-    name varchar(50),
-    surname varchar(50),
-    password varchar(100),
+    email varchar(50) not null,
+    promotor boolean default false,
+    name varchar(50) not null,
+    surname varchar(50) not null,
+    password varchar(100) not null,
     profile_picture longblob,
-
     
     constraint PK_Usuarios primary key (email)
 );
