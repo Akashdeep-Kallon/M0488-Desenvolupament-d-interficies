@@ -14,7 +14,7 @@
 
         <h1 id="register-promoter-title">Registro de promotor</h1>
 
-        <form action="../profiles/profile_promotor-view.html" method="post">
+        <form action="../../controller/UserController.php" method="post">
 
             <label class="sr-only" for="promoter-name">Nombre</label>
             <input id="promoter-name" name="name" class="btn-input input-name" type="text" placeholder="Nombre"
@@ -56,7 +56,7 @@
                 <span>La contraseña debe tener al menos 6 caracteres, una mayúscula, una minúscula y un número.</span>
             </div>
 
-            <input class="btn btn-primary" type="submit" value="Crear cuenta de promotor">
+            <input class="btn btn-primary" type="submit" value="Crear cuenta de promotor" name="register">
         </form>
     </main>
 </body>

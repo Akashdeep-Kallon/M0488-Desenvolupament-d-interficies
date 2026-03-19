@@ -7,62 +7,38 @@ class Users
     private $surname;
     private $password;
 
-    public function __construct($email, $name, $surname, $password, $status)
+    public function __construct($email, $status, $name, $surname, $password)
     {
         $this->email = $email;
+        $this->status = $status ? 1 : 0;
         $this->name = $name;
         $this->surname = $surname;
         $this->password = $password;
-        $this->status = $status;
     }
 
-    public function getStatus()
+    public function register()
     {
-        return $this->status;
+        require_once 'db.php';
+
+        $sql = "INSERT INTO Users (email, status, name, surname, password)
+            VALUES ('$this->email', $this->status, '$this->name', '$this->surname', '$this->password')";
+
+        if ($conexion->query($sql) === TRUE) {
+            echo "Usuario registrado exitosamente.";
+        } else {
+            echo "Error: " . $conexion->error;
+        }
+
+        $conexion->close();
     }
 
-    public function getName()
-    {
-        return $this->name;
-    }
 
-    public function getSurname()
-    {
-        return $this->surname;
-    }
 
-    public function getPassword()
+    public function login()
     {
-        return $this->password;
-    }
-
-    public function getEmail()
-    {
-        return $this->email;
-    }
-
-    public function setStatus($status)
-    {
-        $this->status = $status;
-    }
-
-    public function setName($name)
-    {
-        $this->name = $name;
-    }
-
-    public function setSurname($surname)
-    {
-        $this->surname = $surname;
-    }
-
-    public function setPassword($password)
-    {
-        $this->password = $password;
-    }
-
-    public function setEmail($email)
-    {
-        $this->email = $email;
+        require_once 'db.php';
+        $sql = "SELECT * FROM users WHERE email='$this->email'";
+        $result = $conexion->query($sql);
+        $conexion->close();
     }
 }

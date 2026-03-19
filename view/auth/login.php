@@ -32,7 +32,7 @@
                 <span>La contraseña no coincide.</span>
             </div>
 
-            <input class="btn btn-primary" type="submit" value="Iniciar sesión">
+            <input class="btn btn-primary" type="submit" value="login" name="Iniciar sesión">
         </form>
 
         <p class="divider">O</p>

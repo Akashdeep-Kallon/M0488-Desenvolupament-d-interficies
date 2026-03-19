@@ -15,7 +15,7 @@
 
         <h1 id="register-reader-title">Registro de lector</h1>
 
-        <form action="../profiles/profile-view.html" method="post">
+        <form action="../../controller/UserController.php" method="post">
 
             <label class="sr-only" for="reader-name">Nombre</label>
             <input id="reader-name" name="name" class="btn-input input-name" type="text" placeholder="Nombre"
@@ -65,7 +65,7 @@
                 <span>Las contraseñas no coinciden. Inténtalo de nuevo.</span>
             </div>
 
-            <input class="btn btn-primary" type="submit" value="Registrarse">
+            <input class="btn btn-primary" type="submit" value="Registrarse" name="register">
         </form>
     </main>
 </body>
